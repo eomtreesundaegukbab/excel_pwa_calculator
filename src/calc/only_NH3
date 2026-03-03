@@ -1,0 +1,32 @@
+export type OnlyNH3Inputs = {
+  primary_Diameter: number;       // primary zone 직경
+  dilution_Air_Diameter: number;   // dilution air 직경
+  primary_Avg_Velocity: number;    // primary 평균 유속
+  primary_Phi: number;            // primary 당량비
+  global_Phi: number;             // global 당량비
+  main_Fuel_Ratio: number;         // main 연료 비율
+};
+
+export type OnlyNH3Outputs = {
+  primary_zone_Area: number; //primaryzone 총 단면적
+  dilution_air_Area: number; //dilution air 총 단면적
+  primary_Avg_LPM: number;   //primary 평균 유량
+  primary_fuel_LPM: number;  //primary 연료 유량
+  primary_air_LPM: number;   //primary 공기 유량
+  main_air_LPM: number;      //main 공기 유량
+  dilustion_air_LPM: number; //dilustion 공기 유량
+  dilustion_air_Avg_Vel: number; //dilustion 공기 평균 유속
+  main_fuel_LPM: number;     //main 연료 유량
+  pilot_fuel_LPM: number;    //pilot 연료 유량
+  primary_fuel_LPS: number;  //primary 연료 유량[LPS]
+  primary_fuel_mols: number; //primary 연료 유량[mol/s]
+  Heat_load: number;         //Heat Load
+};
+
+export function calcOnlyNH3(x: OnlyNH3Inputs): OnlyNH3Outputs {
+  const primary_zone_Area = Math.PI * Math.pow(x.primaryDiameter / 2, 2);
+  const primaryFlow = primaryArea * x.primaryAvgVelocity;
+  const phiRatio = x.primaryPhi / (x.globalPhi === 0 ? 1e-12 : x.globalPhi);
+
+  return { primaryArea, primaryFlow, phiRatio };
+}
