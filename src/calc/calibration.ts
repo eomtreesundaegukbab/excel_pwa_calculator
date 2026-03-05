@@ -19,7 +19,7 @@ export type CalibrationOutputs = {
 };
 
 export function calcCalibration(matrix: CalMatrix): CalibrationOutputs {
-  // matrix는 [ [v1..v5], ... ] 5개 행
+  // matrix는 [ [v1..v5], ... ] 5개 행 구성
   const rows: CalRowResult[] = matrix.map((vals, i) => {
     const m = mean(vals);
     const sd = stdevS(vals); // 엑셀 STDEV.S 동일

@@ -4,7 +4,7 @@ export function mean(values: number[]): number {
   return values.reduce((a, b) => a + b, 0) / values.length;
 }
 
-// 엑셀 STDEV.S (샘플 표준편차, n-1)와 동일
+// 엑셀 STDEV.S (개같은 샘플 표준편차)와 동일 기능
 export function stdevS(values: number[]): number {
   const n = values.length;
   if (n < 2) return 0;
@@ -13,7 +13,7 @@ export function stdevS(values: number[]): number {
   return Math.sqrt(varSum / (n - 1));
 }
 
-// 단순 선형회귀 y = a*x + b 및 R^2
+// 단순 선형회귀 y = a*x + b 및 R^2일까?
 export function linearRegression(xs: number[], ys: number[]) {
   const n = Math.min(xs.length, ys.length);
   if (n < 2) return { a: 0, b: 0, r2: 0 };

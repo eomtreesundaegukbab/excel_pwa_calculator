@@ -1,1 +1,1 @@
-if('serviceWorker' in navigator) navigator.serviceWorker.register('/dev-sw.js?dev-sw', { scope: '/', type: 'classic' })
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/excel_pwa_calculator/dev-sw.js?dev-sw', { scope: '/excel_pwa_calculator/', type: 'classic' })

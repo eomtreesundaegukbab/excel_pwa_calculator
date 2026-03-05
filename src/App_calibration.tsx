@@ -24,7 +24,7 @@ export default function App() {
     });
   };
 
-  // 숫자 행렬로 변환 후 계산
+  // 숫자 행렬로 변환 후 계산해버려잇
   const outputs = useMemo(() => {
     const matrix = grid.map((row) => row.map(toNumber));
     return calcCalibration(matrix);
