@@ -20,7 +20,7 @@ export default function AppStoich() {
 
   return (
     <div style={{ maxWidth: 500, margin: "0 auto", padding: 20 }}>
-      <h2>Stoich Calculator</h2>
+      <h2>Density Calculator</h2>
 
       <div style={{ display: "grid", gap: 10, marginBottom: 20 }}>
         <label>
