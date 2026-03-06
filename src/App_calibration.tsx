@@ -83,11 +83,13 @@ const th: React.CSSProperties = {
   padding: "10px 8px",
   fontSize: 13,
   textAlign: "center",
+  color: "#111111",
 };
 
 const tdBase: React.CSSProperties = {
   border: "1px solid #e5e5e5",
   padding: "8px",
+  backgroundColor: "#ffffff",
 };
 
 const tdCenter: React.CSSProperties = {

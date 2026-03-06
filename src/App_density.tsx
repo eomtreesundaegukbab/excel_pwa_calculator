@@ -34,7 +34,8 @@ export default function AppStoich() {
               padding: "10px 12px",
               width: "100%",
               borderRadius: 8,
-              border: "1px solid #ccc",
+              backgroundColor: "#ffffff",
+              color: "#000000",
             }}
           />
         </label>
