@@ -82,14 +82,14 @@ button:focus-visible {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #27292e;
-    --surface: #111827;
-    --surface-2: #27292e;
+    --bg: #27292e; /*페이지 배경색*/
+    --surface: #27292e; /*테이블 내부색*/
+    --surface-2: #1b1d20; /*테이블 항목색*/
     --text: #f9fafb;
     --text-muted: #d1d5db;
-    --border: #374151;
-    --input-bg: #0b1220;
-    --accent: #60a5fa;
+    --border: #374151; /*테두리색*/
+    --input-bg: #0b1220; /*input 배경색*/
+    --accent: #60a5fa; /*특정 버튼 배경색*/
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   }
 }
