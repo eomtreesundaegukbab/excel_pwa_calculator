@@ -28,17 +28,17 @@ export default function CalibrationTable({ values, onChange }: Props) {
         <thead>
           <tr>
             <th style={th}>Row</th>
-            <th style={th}>V1</th>
-            <th style={th}>V2</th>
-            <th style={th}>V3</th>
-            <th style={th}>V4</th>
-            <th style={th}>V5</th>
+            <th style={th}>1회</th>
+            <th style={th}>2회</th>
+            <th style={th}>3회</th>
+            <th style={th}>4회</th>
+            <th style={th}>5회</th>
           </tr>
         </thead>
         <tbody>
           {values.map((row, r) => (
             <tr key={r}>
-              <td style={tdCenter}>{r + 1}</td>
+              <td style={tdCenter}>V{r + 1}</td>
               {row.map((cell, c) => (
                 <td style={td} key={c}>
                   <input
