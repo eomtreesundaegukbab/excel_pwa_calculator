@@ -84,7 +84,7 @@ button:focus-visible {
   :root {
     --bg: #27292e;
     --surface: #111827;
-    --surface-2: #1f2937;
+    --surface-2: #27292e;
     --text: #f9fafb;
     --text-muted: #d1d5db;
     --border: #374151;
