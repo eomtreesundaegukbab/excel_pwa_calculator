@@ -1,23 +1,30 @@
 // src/UI_UX/CalibrationTable.tsx
 type Props = {
-  values: string[][]; // 5x5 문자열(입력용)
+  values: string[][];
   onChange: (r: number, c: number, v: string) => void;
 };
 
 export default function CalibrationTable({ values, onChange }: Props) {
   return (
-    <div style={{ 
-      overflowX: "auto",
-      border: "1px solid #d0d0d0",
-      borderRadius: 12,
-      backgroundColor: "#ffffff",
-      }}>
-      <table style={{
-        borderCollapse: "collapse",
-        width: "100%",
-        minWidth: 520,
-        tableLayout: "fixed",
-        }}>
+    <div
+      style={{
+        overflowX: "auto",
+        border: "1px solid var(--border)",
+        borderRadius: 12,
+        backgroundColor: "var(--surface)",
+        boxShadow: "var(--shadow)",
+      }}
+    >
+      <table
+        style={{
+          borderCollapse: "collapse",
+          width: "100%",
+          minWidth: 520,
+          tableLayout: "fixed",
+          backgroundColor: "var(--surface)",
+          color: "var(--text)",
+        }}
+      >
         <thead>
           <tr>
             <th style={th}>Row</th>
@@ -52,15 +59,18 @@ export default function CalibrationTable({ values, onChange }: Props) {
 }
 
 const th: React.CSSProperties = {
-  border: "1px solid #e5e5e5",
-  background: "#fafafa",
+  border: "1px solid var(--border)",
+  background: "var(--surface-2)",
+  color: "var(--text)",
   padding: "10px 8px",
   fontSize: 13,
   textAlign: "center",
 };
 
 const td: React.CSSProperties = {
-  border: "1px solid #e5e5e5",
+  border: "1px solid var(--border)",
+  backgroundColor: "var(--surface)",
+  color: "var(--text)",
   padding: "8px",
   verticalAlign: "middle",
 };
@@ -76,7 +86,9 @@ const input: React.CSSProperties = {
   width: "100%",
   padding: "8px 10px",
   borderRadius: 10,
-  border: "1px solid #ddd",
+  border: "1px solid var(--border)",
   fontSize: 15,
   boxSizing: "border-box",
+  backgroundColor: "var(--input-bg)",
+  color: "var(--text)",
 };

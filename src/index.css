@@ -69,22 +69,28 @@ button:focus-visible {
 :root {
   color-scheme: light dark;
 
-  --bg: #ffffff;
+  --bg: #f5f7fb;
   --surface: #ffffff;
-  --surface-2: #f3f4f6;
-  --text: #111111;
-  --muted: #666666;
-  --border: #dddddd;
+  --surface-2: #f8fafc;
+  --text: #111827;
+  --text-muted: #4b5563;
+  --border: #d1d5db;
+  --input-bg: #ffffff;
+  --accent: #2563eb;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111315;
-    --surface: #1b1e22;
-    --surface-2: #252a31;
-    --text: #f5f7fa;
-    --muted: #b8c0cc;
-    --border: #434a55;
+    --bg: #0f172a;
+    --surface: #111827;
+    --surface-2: #1f2937;
+    --text: #f9fafb;
+    --text-muted: #d1d5db;
+    --border: #374151;
+    --input-bg: #0b1220;
+    --accent: #60a5fa;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -98,13 +104,6 @@ html, body, #root {
 * {
   box-sizing: border-box;
 }
-
-input, textarea, select, button {
-  background: var(--surface);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-table, th, td, div, span, label, p, h1, h2, h3, h4 {
-  color: var(--text);
+input::placeholder {
+  color: var(--muted);
 }

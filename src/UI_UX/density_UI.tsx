@@ -3,7 +3,7 @@ type Props = {
   o2Dry: number;
 };
 
-export default function StoichResult({ co2Dry, o2Dry }: Props) {
+export default function Density({ co2Dry, o2Dry }: Props) {
   return (
     <div style={{ display: "grid", gap: 12 }}>
       <div
@@ -12,6 +12,8 @@ export default function StoichResult({ co2Dry, o2Dry }: Props) {
           borderRadius: 12,
           padding: 14,
           background: "var(--surface)",
+          color: "var(--text)",
+          boxShadow: "var(--shadow)",
         }}
       >
         <div style={{ fontSize: 14, color: "var(--muted)" }}>
@@ -36,6 +38,8 @@ export default function StoichResult({ co2Dry, o2Dry }: Props) {
           borderRadius: 12,
           padding: 14,
           background: "var(--surface)",
+          color: "var(--text)",
+          boxShadow: "var(--shadow)",
         }}
       >
         <div style={{ fontSize: 14, color: "var(--muted)" }}>
