@@ -6,8 +6,18 @@ type Props = {
 
 export default function CalibrationTable({ values, onChange }: Props) {
   return (
-    <div style={{ overflowX: "auto" }}>
-      <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 520 }}>
+    <div style={{ 
+      overflowX: "auto",
+      border: "1px solid #d0d0d0",
+      borderRadius: 12,
+      backgroundColor: "#ffffff",
+      }}>
+      <table style={{
+        borderCollapse: "collapse",
+        width: "100%",
+        minWidth: 520,
+        tableLayout: "fixed",
+        }}>
         <thead>
           <tr>
             <th style={th}>Row</th>
@@ -52,6 +62,7 @@ const th: React.CSSProperties = {
 const td: React.CSSProperties = {
   border: "1px solid #e5e5e5",
   padding: "8px",
+  verticalAlign: "middle",
 };
 
 const tdCenter: React.CSSProperties = {
@@ -67,4 +78,5 @@ const input: React.CSSProperties = {
   borderRadius: 10,
   border: "1px solid #ddd",
   fontSize: 15,
+  boxSizing: "border-box",
 };
