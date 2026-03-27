@@ -34,7 +34,7 @@ export default function StoichResultOnlyO2({ co2Dry, o2Dry }: Props) {
               "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
           }}
         >
-          {co2Dry.toFixed(9)}
+          {(co2Dry*100).toFixed(6)} %
         </div>
       </div>
 
@@ -66,7 +66,7 @@ export default function StoichResultOnlyO2({ co2Dry, o2Dry }: Props) {
               "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
           }}
         >
-          {o2Dry.toFixed(9)}
+          {(o2Dry*100).toFixed(6)} %
         </div>
       </div>
     </div>
