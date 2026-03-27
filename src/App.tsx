@@ -1,9 +1,10 @@
 import { useState } from "react";
 import AppCalibration from "./App_calibration";
 import AppStoich from "./App_density";
+import AppOnlyO2 from "./App_only_O2";
 
 export default function App() {
-  const [page, setPage] = useState<"calibration" | "stoich">("calibration");
+  const [page, setPage] = useState<"calibration" | "stoich" | "only_O2">("calibration");
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: 20 }}>
@@ -12,10 +13,12 @@ export default function App() {
       <div style={{ display: "flex", gap: 10, marginBottom: 20 }}>
         <button onClick={() => setPage("calibration")}>Calibration</button>
         <button onClick={() => setPage("stoich")}>Density</button>
+        <button onClick={() => setPage("only_O2")}>Density</button>
       </div>
 
       {page === "calibration" && <AppCalibration />}
       {page === "stoich" && <AppStoich />}
+      {page === "only_O2" && <AppOnlyO2 />}
     </div>
   );
 }
