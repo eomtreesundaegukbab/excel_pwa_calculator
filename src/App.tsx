@@ -12,8 +12,8 @@ export default function App() {
 
       <div style={{ display: "flex", gap: 10, marginBottom: 20 }}>
         <button onClick={() => setPage("calibration")}>Calibration</button>
-        <button onClick={() => setPage("stoich")}>Density</button>
-        <button onClick={() => setPage("only_O2")}>only O2</button>
+        <button onClick={() => setPage("stoich")}>Air in</button>
+        <button onClick={() => setPage("only_O2")}>only O2 in</button>
       </div>
 
       {page === "calibration" && <AppCalibration />}
